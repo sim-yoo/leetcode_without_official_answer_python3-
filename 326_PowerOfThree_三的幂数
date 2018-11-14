@@ -1,0 +1,41 @@
+"""
+   Given an integer, write a function to determine if it is a power of three.
+   Example 1:
+   Input: 27
+   Output: true
+
+   Example 2:
+   Input: 0
+   Output: false
+"""
+"""
+   给定一个整数，写一个函数来判断它是否是 3 的幂次方。
+   示例 1:
+   输入: 27
+   输出: true
+
+   示例 2:
+   输入: 0
+   输出: false
+"""
+class Solution:
+    def isPowerOfThree(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
+        if n == 1:
+            return True
+        elif n<3:
+            return False
+        else:
+            while True:
+                if n>1:
+                    if n%3 == 0:
+                        n = n/3
+                    else:
+                        return False
+                        break
+                else:
+                    return True
+                    break   
